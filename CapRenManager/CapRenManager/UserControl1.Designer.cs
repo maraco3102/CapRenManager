@@ -64,28 +64,42 @@
             this._lblTypeCoffin = new System.Windows.Forms.Label();
             this._lblTypeService = new System.Windows.Forms.Label();
             this._btnRegisterSale = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this._tbDeadName = new System.Windows.Forms.TextBox();
+            this._tbDeadSurname = new System.Windows.Forms.TextBox();
+            this._tbDeadBirthPlace = new System.Windows.Forms.TextBox();
+            this._tbDeadSchool = new System.Windows.Forms.TextBox();
+            this._tbDeadJob = new System.Windows.Forms.TextBox();
+            this._tbDeadNation = new System.Windows.Forms.TextBox();
+            this._tbDeadAddress = new System.Windows.Forms.TextBox();
+            this._tbDeadPartner = new System.Windows.Forms.TextBox();
+            this._tbDeadCertificate = new System.Windows.Forms.TextBox();
+            this._tbDeadDoctorNum = new System.Windows.Forms.TextBox();
+            this._tbDeadPlace = new System.Windows.Forms.TextBox();
+            this._tbDeadTime = new System.Windows.Forms.TextBox();
+            this._tbDeadCause = new System.Windows.Forms.TextBox();
+            this._tbDeadDocName = new System.Windows.Forms.TextBox();
+            this._tbInformantName = new System.Windows.Forms.TextBox();
+            this._tbClientRelation = new System.Windows.Forms.TextBox();
+            this._tbClientAddress = new System.Windows.Forms.TextBox();
+            this._tbClientPhone = new System.Windows.Forms.TextBox();
+            this._tbCementery = new System.Windows.Forms.TextBox();
+            this._tbNameClient = new System.Windows.Forms.TextBox();
             this._btnCleanFields = new System.Windows.Forms.Button();
+            this._dtpDeadBorn = new System.Windows.Forms.DateTimePicker();
+            this._cbDeadSex = new System.Windows.Forms.ComboBox();
+            this._nudAge = new System.Windows.Forms.NumericUpDown();
+            this._nudPrice = new System.Windows.Forms.NumericUpDown();
+            this._dtpDeadDate = new System.Windows.Forms.DateTimePicker();
+            this._dtpServiceDate = new System.Windows.Forms.DateTimePicker();
+            this._dtpFuneralDate = new System.Windows.Forms.DateTimePicker();
+            this._cbCivilStatus = new System.Windows.Forms.ComboBox();
+            this._tbPlaceService = new System.Windows.Forms.TextBox();
+            this._tbFuneralTime = new System.Windows.Forms.TextBox();
+            this._cbTypeCoffin = new System.Windows.Forms.ComboBox();
+            this._cbTypeService = new System.Windows.Forms.ComboBox();
             this._tlpSalesRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._nudAge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._nudPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // _tlpSalesRegister
@@ -134,27 +148,39 @@
             this._tlpSalesRegister.Controls.Add(this._lblTypeCoffin, 3, 19);
             this._tlpSalesRegister.Controls.Add(this._lblTypeService, 5, 19);
             this._tlpSalesRegister.Controls.Add(this._btnRegisterSale, 3, 20);
-            this._tlpSalesRegister.Controls.Add(this.textBox1, 1, 1);
-            this._tlpSalesRegister.Controls.Add(this.textBox2, 5, 1);
-            this._tlpSalesRegister.Controls.Add(this.textBox3, 1, 2);
-            this._tlpSalesRegister.Controls.Add(this.textBox5, 7, 3);
-            this._tlpSalesRegister.Controls.Add(this.textBox4, 5, 4);
-            this._tlpSalesRegister.Controls.Add(this.textBox6, 1, 4);
-            this._tlpSalesRegister.Controls.Add(this.textBox7, 1, 5);
-            this._tlpSalesRegister.Controls.Add(this.textBox8, 1, 6);
-            this._tlpSalesRegister.Controls.Add(this.textBox9, 1, 7);
-            this._tlpSalesRegister.Controls.Add(this.textBox10, 1, 8);
-            this._tlpSalesRegister.Controls.Add(this.textBox11, 1, 9);
-            this._tlpSalesRegister.Controls.Add(this.textBox12, 7, 9);
-            this._tlpSalesRegister.Controls.Add(this.textBox13, 1, 10);
-            this._tlpSalesRegister.Controls.Add(this.textBox14, 1, 11);
-            this._tlpSalesRegister.Controls.Add(this.textBox15, 1, 13);
-            this._tlpSalesRegister.Controls.Add(this.textBox16, 5, 13);
-            this._tlpSalesRegister.Controls.Add(this.textBox17, 1, 14);
-            this._tlpSalesRegister.Controls.Add(this.textBox18, 5, 14);
-            this._tlpSalesRegister.Controls.Add(this.textBox19, 1, 17);
-            this._tlpSalesRegister.Controls.Add(this.textBox20, 1, 18);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadName, 1, 1);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadSurname, 5, 1);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadBirthPlace, 1, 2);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadSchool, 7, 3);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadJob, 5, 4);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadNation, 1, 4);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadAddress, 1, 5);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadPartner, 1, 6);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadCertificate, 1, 7);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadDoctorNum, 1, 8);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadPlace, 1, 9);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadTime, 7, 9);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadCause, 1, 10);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadDocName, 1, 11);
+            this._tlpSalesRegister.Controls.Add(this._tbInformantName, 1, 13);
+            this._tlpSalesRegister.Controls.Add(this._tbClientRelation, 5, 13);
+            this._tlpSalesRegister.Controls.Add(this._tbClientAddress, 1, 14);
+            this._tlpSalesRegister.Controls.Add(this._tbClientPhone, 5, 14);
+            this._tlpSalesRegister.Controls.Add(this._tbCementery, 1, 17);
+            this._tlpSalesRegister.Controls.Add(this._tbNameClient, 1, 18);
             this._tlpSalesRegister.Controls.Add(this._btnCleanFields, 0, 20);
+            this._tlpSalesRegister.Controls.Add(this._dtpDeadBorn, 5, 2);
+            this._tlpSalesRegister.Controls.Add(this._cbDeadSex, 1, 3);
+            this._tlpSalesRegister.Controls.Add(this._nudAge, 3, 3);
+            this._tlpSalesRegister.Controls.Add(this._nudPrice, 1, 19);
+            this._tlpSalesRegister.Controls.Add(this._dtpDeadDate, 4, 9);
+            this._tlpSalesRegister.Controls.Add(this._dtpServiceDate, 5, 15);
+            this._tlpSalesRegister.Controls.Add(this._dtpFuneralDate, 1, 16);
+            this._tlpSalesRegister.Controls.Add(this._cbCivilStatus, 5, 3);
+            this._tlpSalesRegister.Controls.Add(this._tbPlaceService, 1, 15);
+            this._tlpSalesRegister.Controls.Add(this._tbFuneralTime, 5, 16);
+            this._tlpSalesRegister.Controls.Add(this._cbTypeCoffin, 4, 19);
+            this._tlpSalesRegister.Controls.Add(this._cbTypeService, 6, 19);
             this._tlpSalesRegister.Dock = System.Windows.Forms.DockStyle.Fill;
             this._tlpSalesRegister.Location = new System.Drawing.Point(0, 0);
             this._tlpSalesRegister.Name = "_tlpSalesRegister";
@@ -604,177 +630,181 @@
             this._btnRegisterSale.Text = "Registrar Servicio";
             this._btnRegisterSale.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // _tbDeadName
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox1, 3);
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(130, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 20);
-            this.textBox1.TabIndex = 35;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadName, 3);
+            this._tbDeadName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadName.Location = new System.Drawing.Point(130, 33);
+            this._tbDeadName.Name = "_tbDeadName";
+            this._tbDeadName.Size = new System.Drawing.Size(317, 20);
+            this._tbDeadName.TabIndex = 35;
             // 
-            // textBox2
+            // _tbDeadSurname
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox2, 3);
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(581, 33);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(298, 20);
-            this.textBox2.TabIndex = 36;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadSurname, 3);
+            this._tbDeadSurname.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadSurname.Location = new System.Drawing.Point(581, 33);
+            this._tbDeadSurname.Name = "_tbDeadSurname";
+            this._tbDeadSurname.Size = new System.Drawing.Size(298, 20);
+            this._tbDeadSurname.TabIndex = 36;
             // 
-            // textBox3
+            // _tbDeadBirthPlace
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox3, 3);
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(130, 63);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(317, 20);
-            this.textBox3.TabIndex = 37;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadBirthPlace, 3);
+            this._tbDeadBirthPlace.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadBirthPlace.Location = new System.Drawing.Point(130, 63);
+            this._tbDeadBirthPlace.Name = "_tbDeadBirthPlace";
+            this._tbDeadBirthPlace.Size = new System.Drawing.Size(317, 20);
+            this._tbDeadBirthPlace.TabIndex = 37;
             // 
-            // textBox5
+            // _tbDeadSchool
             // 
-            this.textBox5.Location = new System.Drawing.Point(787, 93);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(89, 20);
-            this.textBox5.TabIndex = 39;
+            this._tbDeadSchool.Location = new System.Drawing.Point(787, 93);
+            this._tbDeadSchool.Name = "_tbDeadSchool";
+            this._tbDeadSchool.Size = new System.Drawing.Size(89, 20);
+            this._tbDeadSchool.TabIndex = 39;
             // 
-            // textBox4
+            // _tbDeadJob
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox4, 3);
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(581, 123);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(298, 20);
-            this.textBox4.TabIndex = 40;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadJob, 3);
+            this._tbDeadJob.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadJob.Location = new System.Drawing.Point(581, 123);
+            this._tbDeadJob.Name = "_tbDeadJob";
+            this._tbDeadJob.Size = new System.Drawing.Size(298, 20);
+            this._tbDeadJob.TabIndex = 40;
             // 
-            // textBox6
+            // _tbDeadNation
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox6, 3);
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Location = new System.Drawing.Point(130, 123);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(317, 20);
-            this.textBox6.TabIndex = 41;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadNation, 3);
+            this._tbDeadNation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadNation.Location = new System.Drawing.Point(130, 123);
+            this._tbDeadNation.Name = "_tbDeadNation";
+            this._tbDeadNation.Size = new System.Drawing.Size(317, 20);
+            this._tbDeadNation.TabIndex = 41;
             // 
-            // textBox7
+            // _tbDeadAddress
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox7, 7);
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Location = new System.Drawing.Point(130, 153);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(749, 20);
-            this.textBox7.TabIndex = 42;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadAddress, 7);
+            this._tbDeadAddress.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadAddress.Location = new System.Drawing.Point(130, 153);
+            this._tbDeadAddress.Name = "_tbDeadAddress";
+            this._tbDeadAddress.Size = new System.Drawing.Size(749, 20);
+            this._tbDeadAddress.TabIndex = 42;
             // 
-            // textBox8
+            // _tbDeadPartner
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox8, 7);
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Location = new System.Drawing.Point(130, 183);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(749, 20);
-            this.textBox8.TabIndex = 43;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadPartner, 7);
+            this._tbDeadPartner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadPartner.Location = new System.Drawing.Point(130, 183);
+            this._tbDeadPartner.Name = "_tbDeadPartner";
+            this._tbDeadPartner.Size = new System.Drawing.Size(749, 20);
+            this._tbDeadPartner.TabIndex = 43;
             // 
-            // textBox9
+            // _tbDeadCertificate
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox9, 7);
-            this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Location = new System.Drawing.Point(130, 213);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(749, 20);
-            this.textBox9.TabIndex = 44;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadCertificate, 7);
+            this._tbDeadCertificate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadCertificate.Location = new System.Drawing.Point(130, 213);
+            this._tbDeadCertificate.Name = "_tbDeadCertificate";
+            this._tbDeadCertificate.Size = new System.Drawing.Size(749, 20);
+            this._tbDeadCertificate.TabIndex = 44;
             // 
-            // textBox10
+            // _tbDeadDoctorNum
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox10, 7);
-            this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox10.Location = new System.Drawing.Point(130, 243);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(749, 20);
-            this.textBox10.TabIndex = 45;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadDoctorNum, 7);
+            this._tbDeadDoctorNum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadDoctorNum.Location = new System.Drawing.Point(130, 243);
+            this._tbDeadDoctorNum.Name = "_tbDeadDoctorNum";
+            this._tbDeadDoctorNum.Size = new System.Drawing.Size(749, 20);
+            this._tbDeadDoctorNum.TabIndex = 45;
             // 
-            // textBox11
+            // _tbDeadPlace
             // 
-            this.textBox11.Location = new System.Drawing.Point(130, 273);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(89, 20);
-            this.textBox11.TabIndex = 46;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadPlace, 2);
+            this._tbDeadPlace.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadPlace.Location = new System.Drawing.Point(130, 273);
+            this._tbDeadPlace.Name = "_tbDeadPlace";
+            this._tbDeadPlace.Size = new System.Drawing.Size(184, 20);
+            this._tbDeadPlace.TabIndex = 46;
             // 
-            // textBox12
+            // _tbDeadTime
             // 
-            this.textBox12.Location = new System.Drawing.Point(787, 273);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(89, 20);
-            this.textBox12.TabIndex = 47;
+            this._tbDeadTime.Location = new System.Drawing.Point(787, 273);
+            this._tbDeadTime.Name = "_tbDeadTime";
+            this._tbDeadTime.Size = new System.Drawing.Size(89, 20);
+            this._tbDeadTime.TabIndex = 47;
             // 
-            // textBox13
+            // _tbDeadCause
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox13, 7);
-            this.textBox13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox13.Location = new System.Drawing.Point(130, 303);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(749, 20);
-            this.textBox13.TabIndex = 48;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadCause, 7);
+            this._tbDeadCause.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadCause.Location = new System.Drawing.Point(130, 303);
+            this._tbDeadCause.Name = "_tbDeadCause";
+            this._tbDeadCause.Size = new System.Drawing.Size(749, 20);
+            this._tbDeadCause.TabIndex = 48;
             // 
-            // textBox14
+            // _tbDeadDocName
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox14, 7);
-            this.textBox14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox14.Location = new System.Drawing.Point(130, 333);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(749, 20);
-            this.textBox14.TabIndex = 49;
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadDocName, 7);
+            this._tbDeadDocName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadDocName.Location = new System.Drawing.Point(130, 333);
+            this._tbDeadDocName.Name = "_tbDeadDocName";
+            this._tbDeadDocName.Size = new System.Drawing.Size(749, 20);
+            this._tbDeadDocName.TabIndex = 49;
             // 
-            // textBox15
+            // _tbInformantName
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox15, 3);
-            this.textBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox15.Location = new System.Drawing.Point(130, 393);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(317, 20);
-            this.textBox15.TabIndex = 50;
+            this._tlpSalesRegister.SetColumnSpan(this._tbInformantName, 3);
+            this._tbInformantName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbInformantName.Location = new System.Drawing.Point(130, 393);
+            this._tbInformantName.Name = "_tbInformantName";
+            this._tbInformantName.Size = new System.Drawing.Size(317, 20);
+            this._tbInformantName.TabIndex = 50;
             // 
-            // textBox16
+            // _tbClientRelation
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox16, 3);
-            this.textBox16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox16.Location = new System.Drawing.Point(581, 393);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(298, 20);
-            this.textBox16.TabIndex = 51;
+            this._tlpSalesRegister.SetColumnSpan(this._tbClientRelation, 3);
+            this._tbClientRelation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbClientRelation.Location = new System.Drawing.Point(581, 393);
+            this._tbClientRelation.Name = "_tbClientRelation";
+            this._tbClientRelation.Size = new System.Drawing.Size(298, 20);
+            this._tbClientRelation.TabIndex = 51;
             // 
-            // textBox17
+            // _tbClientAddress
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox17, 3);
-            this.textBox17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox17.Location = new System.Drawing.Point(130, 423);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(317, 20);
-            this.textBox17.TabIndex = 52;
+            this._tlpSalesRegister.SetColumnSpan(this._tbClientAddress, 3);
+            this._tbClientAddress.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbClientAddress.Location = new System.Drawing.Point(130, 423);
+            this._tbClientAddress.Name = "_tbClientAddress";
+            this._tbClientAddress.Size = new System.Drawing.Size(317, 20);
+            this._tbClientAddress.TabIndex = 52;
             // 
-            // textBox18
+            // _tbClientPhone
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox18, 3);
-            this.textBox18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox18.Location = new System.Drawing.Point(581, 423);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(298, 20);
-            this.textBox18.TabIndex = 53;
+            this._tlpSalesRegister.SetColumnSpan(this._tbClientPhone, 3);
+            this._tbClientPhone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbClientPhone.Location = new System.Drawing.Point(581, 423);
+            this._tbClientPhone.Name = "_tbClientPhone";
+            this._tbClientPhone.Size = new System.Drawing.Size(298, 20);
+            this._tbClientPhone.TabIndex = 53;
             // 
-            // textBox19
+            // _tbCementery
             // 
-            this._tlpSalesRegister.SetColumnSpan(this.textBox19, 7);
-            this.textBox19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox19.Location = new System.Drawing.Point(130, 513);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(749, 20);
-            this.textBox19.TabIndex = 54;
+            this._tlpSalesRegister.SetColumnSpan(this._tbCementery, 7);
+            this._tbCementery.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbCementery.Location = new System.Drawing.Point(130, 513);
+            this._tbCementery.Name = "_tbCementery";
+            this._tbCementery.Size = new System.Drawing.Size(749, 20);
+            this._tbCementery.TabIndex = 54;
             // 
-            // textBox20
+            // _tbNameClient
             // 
-            this.textBox20.Location = new System.Drawing.Point(130, 543);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(89, 20);
-            this.textBox20.TabIndex = 55;
+            this._tlpSalesRegister.SetColumnSpan(this._tbNameClient, 7);
+            this._tbNameClient.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbNameClient.Location = new System.Drawing.Point(130, 543);
+            this._tbNameClient.Name = "_tbNameClient";
+            this._tbNameClient.Size = new System.Drawing.Size(749, 20);
+            this._tbNameClient.TabIndex = 55;
             // 
             // _btnCleanFields
             // 
@@ -788,6 +818,110 @@
             this._btnCleanFields.Text = "Borrar Datos";
             this._btnCleanFields.UseVisualStyleBackColor = false;
             // 
+            // _dtpDeadBorn
+            // 
+            this._tlpSalesRegister.SetColumnSpan(this._dtpDeadBorn, 3);
+            this._dtpDeadBorn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dtpDeadBorn.Location = new System.Drawing.Point(581, 63);
+            this._dtpDeadBorn.Name = "_dtpDeadBorn";
+            this._dtpDeadBorn.Size = new System.Drawing.Size(298, 20);
+            this._dtpDeadBorn.TabIndex = 57;
+            // 
+            // _cbDeadSex
+            // 
+            this._cbDeadSex.FormattingEnabled = true;
+            this._cbDeadSex.Location = new System.Drawing.Point(130, 93);
+            this._cbDeadSex.Name = "_cbDeadSex";
+            this._cbDeadSex.Size = new System.Drawing.Size(89, 21);
+            this._cbDeadSex.TabIndex = 58;
+            // 
+            // _nudAge
+            // 
+            this._nudAge.Location = new System.Drawing.Point(320, 93);
+            this._nudAge.Name = "_nudAge";
+            this._nudAge.Size = new System.Drawing.Size(120, 20);
+            this._nudAge.TabIndex = 59;
+            // 
+            // _nudPrice
+            // 
+            this._tlpSalesRegister.SetColumnSpan(this._nudPrice, 2);
+            this._nudPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._nudPrice.Location = new System.Drawing.Point(130, 573);
+            this._nudPrice.Name = "_nudPrice";
+            this._nudPrice.Size = new System.Drawing.Size(184, 20);
+            this._nudPrice.TabIndex = 60;
+            // 
+            // _dtpDeadDate
+            // 
+            this._tlpSalesRegister.SetColumnSpan(this._dtpDeadDate, 2);
+            this._dtpDeadDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dtpDeadDate.Location = new System.Drawing.Point(453, 273);
+            this._dtpDeadDate.Name = "_dtpDeadDate";
+            this._dtpDeadDate.Size = new System.Drawing.Size(217, 20);
+            this._dtpDeadDate.TabIndex = 61;
+            // 
+            // _dtpServiceDate
+            // 
+            this._tlpSalesRegister.SetColumnSpan(this._dtpServiceDate, 3);
+            this._dtpServiceDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dtpServiceDate.Location = new System.Drawing.Point(581, 453);
+            this._dtpServiceDate.Name = "_dtpServiceDate";
+            this._dtpServiceDate.Size = new System.Drawing.Size(298, 20);
+            this._dtpServiceDate.TabIndex = 62;
+            // 
+            // _dtpFuneralDate
+            // 
+            this._tlpSalesRegister.SetColumnSpan(this._dtpFuneralDate, 3);
+            this._dtpFuneralDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dtpFuneralDate.Location = new System.Drawing.Point(130, 483);
+            this._dtpFuneralDate.Name = "_dtpFuneralDate";
+            this._dtpFuneralDate.Size = new System.Drawing.Size(317, 20);
+            this._dtpFuneralDate.TabIndex = 63;
+            // 
+            // _cbCivilStatus
+            // 
+            this._cbCivilStatus.FormattingEnabled = true;
+            this._cbCivilStatus.Location = new System.Drawing.Point(581, 93);
+            this._cbCivilStatus.Name = "_cbCivilStatus";
+            this._cbCivilStatus.Size = new System.Drawing.Size(89, 21);
+            this._cbCivilStatus.TabIndex = 64;
+            // 
+            // _tbPlaceService
+            // 
+            this._tlpSalesRegister.SetColumnSpan(this._tbPlaceService, 3);
+            this._tbPlaceService.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbPlaceService.Location = new System.Drawing.Point(130, 453);
+            this._tbPlaceService.Name = "_tbPlaceService";
+            this._tbPlaceService.Size = new System.Drawing.Size(317, 20);
+            this._tbPlaceService.TabIndex = 65;
+            // 
+            // _tbFuneralTime
+            // 
+            this._tlpSalesRegister.SetColumnSpan(this._tbFuneralTime, 3);
+            this._tbFuneralTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbFuneralTime.Location = new System.Drawing.Point(581, 483);
+            this._tbFuneralTime.Name = "_tbFuneralTime";
+            this._tbFuneralTime.Size = new System.Drawing.Size(298, 20);
+            this._tbFuneralTime.TabIndex = 66;
+            // 
+            // _cbTypeCoffin
+            // 
+            this._cbTypeCoffin.FormattingEnabled = true;
+            this._cbTypeCoffin.Location = new System.Drawing.Point(453, 573);
+            this._cbTypeCoffin.Name = "_cbTypeCoffin";
+            this._cbTypeCoffin.Size = new System.Drawing.Size(121, 21);
+            this._cbTypeCoffin.TabIndex = 67;
+            // 
+            // _cbTypeService
+            // 
+            this._tlpSalesRegister.SetColumnSpan(this._cbTypeService, 2);
+            this._cbTypeService.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._cbTypeService.FormattingEnabled = true;
+            this._cbTypeService.Location = new System.Drawing.Point(676, 573);
+            this._cbTypeService.Name = "_cbTypeService";
+            this._cbTypeService.Size = new System.Drawing.Size(203, 21);
+            this._cbTypeService.TabIndex = 68;
+            // 
             // _ucSalesRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -798,6 +932,8 @@
             this.Size = new System.Drawing.Size(882, 635);
             this._tlpSalesRegister.ResumeLayout(false);
             this._tlpSalesRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._nudAge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._nudPrice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -840,26 +976,38 @@
         private System.Windows.Forms.Label _lblTypeCoffin;
         private System.Windows.Forms.Label _lblTypeService;
         private System.Windows.Forms.Button _btnRegisterSale;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox _tbDeadName;
+        private System.Windows.Forms.TextBox _tbDeadSurname;
+        private System.Windows.Forms.TextBox _tbDeadBirthPlace;
+        private System.Windows.Forms.TextBox _tbDeadSchool;
+        private System.Windows.Forms.TextBox _tbDeadJob;
+        private System.Windows.Forms.TextBox _tbDeadNation;
+        private System.Windows.Forms.TextBox _tbDeadAddress;
+        private System.Windows.Forms.TextBox _tbDeadPartner;
+        private System.Windows.Forms.TextBox _tbDeadCertificate;
+        private System.Windows.Forms.TextBox _tbDeadDoctorNum;
+        private System.Windows.Forms.TextBox _tbDeadPlace;
+        private System.Windows.Forms.TextBox _tbDeadTime;
+        private System.Windows.Forms.TextBox _tbDeadCause;
+        private System.Windows.Forms.TextBox _tbDeadDocName;
+        private System.Windows.Forms.TextBox _tbInformantName;
+        private System.Windows.Forms.TextBox _tbClientRelation;
+        private System.Windows.Forms.TextBox _tbClientAddress;
+        private System.Windows.Forms.TextBox _tbClientPhone;
+        private System.Windows.Forms.TextBox _tbCementery;
+        private System.Windows.Forms.TextBox _tbNameClient;
         private System.Windows.Forms.Button _btnCleanFields;
+        private System.Windows.Forms.DateTimePicker _dtpDeadBorn;
+        private System.Windows.Forms.ComboBox _cbDeadSex;
+        private System.Windows.Forms.NumericUpDown _nudAge;
+        private System.Windows.Forms.NumericUpDown _nudPrice;
+        private System.Windows.Forms.DateTimePicker _dtpDeadDate;
+        private System.Windows.Forms.DateTimePicker _dtpServiceDate;
+        private System.Windows.Forms.DateTimePicker _dtpFuneralDate;
+        private System.Windows.Forms.ComboBox _cbCivilStatus;
+        private System.Windows.Forms.TextBox _tbPlaceService;
+        private System.Windows.Forms.TextBox _tbFuneralTime;
+        private System.Windows.Forms.ComboBox _cbTypeCoffin;
+        private System.Windows.Forms.ComboBox _cbTypeService;
     }
 }
