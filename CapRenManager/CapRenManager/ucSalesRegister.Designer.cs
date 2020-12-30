@@ -1,6 +1,6 @@
 ﻿namespace CapRenManager
 {
-    partial class _ucSalesRegister
+    partial class ucSalesRegister
     {
         /// <summary> 
         /// Required designer variable.

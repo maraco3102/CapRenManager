@@ -34,7 +34,7 @@
             this._bInventary = new System.Windows.Forms.Button();
             this._tlpMainButtons = new System.Windows.Forms.TableLayoutPanel();
             this._tlpMainScreen = new System.Windows.Forms.TableLayoutPanel();
-            this._ucSalesRegister1 = new CapRenManager._ucSalesRegister();
+            this._ucSalesRegister1 = new CapRenManager.ucSalesRegister();
             this._tlpMainButtons.SuspendLayout();
             this._tlpMainScreen.SuspendLayout();
             this.SuspendLayout();
@@ -159,7 +159,7 @@
         private System.Windows.Forms.Button _bSalesRegister;
         private System.Windows.Forms.TableLayoutPanel _tlpMainButtons;
         private System.Windows.Forms.TableLayoutPanel _tlpMainScreen;
-        private _ucSalesRegister _ucSalesRegister1;
+        private ucSalesRegister _ucSalesRegister1;
     }
 }
 

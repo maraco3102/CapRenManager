@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapRenManager.DocCreator
 {
-    class DocCreator
+    class cDocCreator
     {
     }
 }

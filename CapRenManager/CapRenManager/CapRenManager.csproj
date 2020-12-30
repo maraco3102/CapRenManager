@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB\RegisterService.cs" />
-    <Compile Include="DocCreator\DocCreator.cs" />
+    <Compile Include="DB\cDBRegisterService.cs" />
+    <Compile Include="DocCreator\cDocCreator.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,11 +56,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_ucSalesRegister.cs">
+    <Compile Include="ucSalesRegister.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="_ucSalesRegister.Designer.cs">
-      <DependentUpon>_ucSalesRegister.cs</DependentUpon>
+    <Compile Include="ucSalesRegister.Designer.cs">
+      <DependentUpon>ucSalesRegister.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -74,8 +74,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="_ucSalesRegister.resx">
-      <DependentUpon>_ucSalesRegister.cs</DependentUpon>
+    <EmbeddedResource Include="ucSalesRegister.resx">
+      <DependentUpon>ucSalesRegister.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

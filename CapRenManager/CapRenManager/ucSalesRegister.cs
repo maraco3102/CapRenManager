@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapRenManager
 {
-    public partial class _ucSalesRegister : UserControl
+    public partial class ucSalesRegister : UserControl
     {
-        public _ucSalesRegister()
+        public ucSalesRegister()
         {
             InitializeComponent();
         }
@@ -62,7 +62,7 @@ namespace CapRenManager
             FormData.Add(_cbTypeCoffin.Text.ToString());
             FormData.Add(_cbTypeService.Text.ToString());
 
-
+            //FormData.ForEach(Print);
 
         }
     }
