@@ -72,9 +72,7 @@
             this._tbDeadNation = new System.Windows.Forms.TextBox();
             this._tbDeadAddress = new System.Windows.Forms.TextBox();
             this._tbDeadPartner = new System.Windows.Forms.TextBox();
-            this._tbDeadCertificate = new System.Windows.Forms.TextBox();
             this._tbDeadDoctorNum = new System.Windows.Forms.TextBox();
-            this._tbDeadPlace = new System.Windows.Forms.TextBox();
             this._tbDeadTime = new System.Windows.Forms.TextBox();
             this._tbDeadCause = new System.Windows.Forms.TextBox();
             this._tbDeadDocName = new System.Windows.Forms.TextBox();
@@ -97,9 +95,12 @@
             this._tbFuneralTime = new System.Windows.Forms.TextBox();
             this._cbTypeCoffin = new System.Windows.Forms.ComboBox();
             this._cbTypeService = new System.Windows.Forms.ComboBox();
+            this._tbDeadPlace = new System.Windows.Forms.TextBox();
+            this._nudCertificate = new System.Windows.Forms.NumericUpDown();
             this._tlpSalesRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._nudAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._nudPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._nudCertificate)).BeginInit();
             this.SuspendLayout();
             // 
             // _tlpSalesRegister
@@ -156,9 +157,7 @@
             this._tlpSalesRegister.Controls.Add(this._tbDeadNation, 1, 4);
             this._tlpSalesRegister.Controls.Add(this._tbDeadAddress, 1, 5);
             this._tlpSalesRegister.Controls.Add(this._tbDeadPartner, 1, 6);
-            this._tlpSalesRegister.Controls.Add(this._tbDeadCertificate, 1, 7);
             this._tlpSalesRegister.Controls.Add(this._tbDeadDoctorNum, 1, 8);
-            this._tlpSalesRegister.Controls.Add(this._tbDeadPlace, 1, 9);
             this._tlpSalesRegister.Controls.Add(this._tbDeadTime, 7, 9);
             this._tlpSalesRegister.Controls.Add(this._tbDeadCause, 1, 10);
             this._tlpSalesRegister.Controls.Add(this._tbDeadDocName, 1, 11);
@@ -181,6 +180,8 @@
             this._tlpSalesRegister.Controls.Add(this._tbFuneralTime, 5, 16);
             this._tlpSalesRegister.Controls.Add(this._cbTypeCoffin, 4, 19);
             this._tlpSalesRegister.Controls.Add(this._cbTypeService, 6, 19);
+            this._tlpSalesRegister.Controls.Add(this._tbDeadPlace, 1, 7);
+            this._tlpSalesRegister.Controls.Add(this._nudCertificate, 1, 9);
             this._tlpSalesRegister.Dock = System.Windows.Forms.DockStyle.Fill;
             this._tlpSalesRegister.Location = new System.Drawing.Point(0, 0);
             this._tlpSalesRegister.Name = "_tlpSalesRegister";
@@ -206,6 +207,12 @@
             this._tlpSalesRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.761677F));
             this._tlpSalesRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.761677F));
             this._tlpSalesRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.766438F));
+            this._tlpSalesRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this._tlpSalesRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this._tlpSalesRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this._tlpSalesRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this._tlpSalesRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this._tlpSalesRegister.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this._tlpSalesRegister.Size = new System.Drawing.Size(882, 635);
             this._tlpSalesRegister.TabIndex = 0;
             // 
@@ -375,7 +382,7 @@
             this._lblDeadCertificate.Name = "_lblDeadCertificate";
             this._lblDeadCertificate.Size = new System.Drawing.Size(121, 30);
             this._lblDeadCertificate.TabIndex = 13;
-            this._lblDeadCertificate.Text = "No. de Certificado";
+            this._lblDeadCertificate.Text = "Lugar de Defuncion";
             this._lblDeadCertificate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // _lblDoctorCode
@@ -399,7 +406,7 @@
             this._lblDeadPlace.Name = "_lblDeadPlace";
             this._lblDeadPlace.Size = new System.Drawing.Size(121, 30);
             this._lblDeadPlace.TabIndex = 15;
-            this._lblDeadPlace.Text = "Lugar de Defuncion";
+            this._lblDeadPlace.Text = "Numero de Certificado";
             this._lblDeadPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // _lblDeadDate
@@ -629,6 +636,7 @@
             this._btnRegisterSale.TabIndex = 34;
             this._btnRegisterSale.Text = "Registrar Servicio";
             this._btnRegisterSale.UseVisualStyleBackColor = true;
+            this._btnRegisterSale.Click += new System.EventHandler(this._btnRegisterSale_Click);
             // 
             // _tbDeadName
             // 
@@ -700,15 +708,6 @@
             this._tbDeadPartner.Size = new System.Drawing.Size(749, 20);
             this._tbDeadPartner.TabIndex = 43;
             // 
-            // _tbDeadCertificate
-            // 
-            this._tlpSalesRegister.SetColumnSpan(this._tbDeadCertificate, 7);
-            this._tbDeadCertificate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._tbDeadCertificate.Location = new System.Drawing.Point(130, 213);
-            this._tbDeadCertificate.Name = "_tbDeadCertificate";
-            this._tbDeadCertificate.Size = new System.Drawing.Size(749, 20);
-            this._tbDeadCertificate.TabIndex = 44;
-            // 
             // _tbDeadDoctorNum
             // 
             this._tlpSalesRegister.SetColumnSpan(this._tbDeadDoctorNum, 7);
@@ -717,15 +716,6 @@
             this._tbDeadDoctorNum.Name = "_tbDeadDoctorNum";
             this._tbDeadDoctorNum.Size = new System.Drawing.Size(749, 20);
             this._tbDeadDoctorNum.TabIndex = 45;
-            // 
-            // _tbDeadPlace
-            // 
-            this._tlpSalesRegister.SetColumnSpan(this._tbDeadPlace, 2);
-            this._tbDeadPlace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._tbDeadPlace.Location = new System.Drawing.Point(130, 273);
-            this._tbDeadPlace.Name = "_tbDeadPlace";
-            this._tbDeadPlace.Size = new System.Drawing.Size(184, 20);
-            this._tbDeadPlace.TabIndex = 46;
             // 
             // _tbDeadTime
             // 
@@ -922,6 +912,24 @@
             this._cbTypeService.Size = new System.Drawing.Size(203, 21);
             this._cbTypeService.TabIndex = 68;
             // 
+            // _tbDeadPlace
+            // 
+            this._tlpSalesRegister.SetColumnSpan(this._tbDeadPlace, 7);
+            this._tbDeadPlace.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tbDeadPlace.Location = new System.Drawing.Point(130, 213);
+            this._tbDeadPlace.Name = "_tbDeadPlace";
+            this._tbDeadPlace.Size = new System.Drawing.Size(749, 20);
+            this._tbDeadPlace.TabIndex = 69;
+            // 
+            // _nudCertificate
+            // 
+            this._tlpSalesRegister.SetColumnSpan(this._nudCertificate, 2);
+            this._nudCertificate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._nudCertificate.Location = new System.Drawing.Point(130, 273);
+            this._nudCertificate.Name = "_nudCertificate";
+            this._nudCertificate.Size = new System.Drawing.Size(184, 20);
+            this._nudCertificate.TabIndex = 70;
+            // 
             // _ucSalesRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -934,6 +942,7 @@
             this._tlpSalesRegister.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._nudAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._nudPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._nudCertificate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -984,9 +993,7 @@
         private System.Windows.Forms.TextBox _tbDeadNation;
         private System.Windows.Forms.TextBox _tbDeadAddress;
         private System.Windows.Forms.TextBox _tbDeadPartner;
-        private System.Windows.Forms.TextBox _tbDeadCertificate;
         private System.Windows.Forms.TextBox _tbDeadDoctorNum;
-        private System.Windows.Forms.TextBox _tbDeadPlace;
         private System.Windows.Forms.TextBox _tbDeadTime;
         private System.Windows.Forms.TextBox _tbDeadCause;
         private System.Windows.Forms.TextBox _tbDeadDocName;
@@ -1009,5 +1016,7 @@
         private System.Windows.Forms.TextBox _tbFuneralTime;
         private System.Windows.Forms.ComboBox _cbTypeCoffin;
         private System.Windows.Forms.ComboBox _cbTypeService;
+        private System.Windows.Forms.TextBox _tbDeadPlace;
+        private System.Windows.Forms.NumericUpDown _nudCertificate;
     }
 }
