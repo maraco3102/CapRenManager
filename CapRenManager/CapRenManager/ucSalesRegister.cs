@@ -26,6 +26,7 @@ namespace CapRenManager
             Active
         }
 
+        #region Button Events
         private void _btnRegisterSale_Click(object sender, EventArgs e)
         {
             List<string> FormData = new List<string>();
@@ -78,7 +79,9 @@ namespace CapRenManager
 
         }
 
-        #region Register in DB
+        #endregion
+
+        #region Register Sale in DB
         static void registerData(DateTime registerDate, string date, string name, string price, string coffin, string type)
         {
             try
@@ -112,32 +115,61 @@ namespace CapRenManager
 
         #endregion
 
+        #region On Load
         private void ucSalesRegister_Load(object sender, EventArgs e)
+        { 
+
+            LoadCoffinsFromDB();
+
+            LoadServiceTypesFromDB();
+
+        }
+        #endregion
+
+        #region Load Coffins in CB
+        private void LoadCoffinsFromDB()
         {
             try
             {
-                string MyConnection2 = Properties.Settings.Default.connectDB;
-                //Display query  
-                string Query = "select NameCoffin from coffins;";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                //This is command class which will handle the query and connection object.  
-                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
-                MySqlDataReader MyReader2 = MyCommand2.ExecuteReader();
-                MyConn2.Open();
+                MySqlConnection connection = new MySqlConnection(Properties.Settings.Default.connectDB);
 
-                while (MyReader2.Read())
+                string selectQuery = "SELECT * FROM coffins";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(selectQuery, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    _cbTypeCoffin.Items.Add(MyReader2.GetString("id"));
+                    _cbTypeCoffin.Items.Add(reader.GetString("NameCoffin"));
                 }
-                MyConn2.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
-            }
+        }
+        #endregion
 
-        
+        #region Load Service Types in CB
+        private void LoadServiceTypesFromDB()
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(Properties.Settings.Default.connectDB);
+
+                string selectQuery = "SELECT * FROM servicetype";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(selectQuery, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    _cbTypeService.Items.Add(reader.GetString("ServiceType"));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
     }
 }
