@@ -34,9 +34,11 @@
             this._bInventary = new System.Windows.Forms.Button();
             this._tlpMainButtons = new System.Windows.Forms.TableLayoutPanel();
             this._tlpMainScreen = new System.Windows.Forms.TableLayoutPanel();
-            this._ucSalesRegister1 = new CapRenManager.ucSalesRegister();
+            this._pMainPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this._tlpMainButtons.SuspendLayout();
             this._tlpMainScreen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // _bSalesRegister
@@ -103,6 +105,7 @@
             this._tlpMainButtons.Controls.Add(this._bInventary, 0, 3);
             this._tlpMainButtons.Controls.Add(this._bSalesRegister, 0, 1);
             this._tlpMainButtons.Controls.Add(this._bSalesRecord, 0, 2);
+            this._tlpMainButtons.Controls.Add(this.pictureBox1, 0, 0);
             this._tlpMainButtons.Dock = System.Windows.Forms.DockStyle.Fill;
             this._tlpMainButtons.Location = new System.Drawing.Point(3, 3);
             this._tlpMainButtons.Name = "_tlpMainButtons";
@@ -121,7 +124,7 @@
             this._tlpMainScreen.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this._tlpMainScreen.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this._tlpMainScreen.Controls.Add(this._tlpMainButtons, 0, 0);
-            this._tlpMainScreen.Controls.Add(this._ucSalesRegister1, 1, 0);
+            this._tlpMainScreen.Controls.Add(this._pMainPanel, 1, 0);
             this._tlpMainScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this._tlpMainScreen.Location = new System.Drawing.Point(0, 0);
             this._tlpMainScreen.Name = "_tlpMainScreen";
@@ -130,14 +133,24 @@
             this._tlpMainScreen.Size = new System.Drawing.Size(1184, 641);
             this._tlpMainScreen.TabIndex = 2;
             // 
-            // _ucSalesRegister1
+            // _pMainPanel
             // 
-            this._ucSalesRegister1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
-            this._ucSalesRegister1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._ucSalesRegister1.Location = new System.Drawing.Point(299, 3);
-            this._ucSalesRegister1.Name = "_ucSalesRegister1";
-            this._ucSalesRegister1.Size = new System.Drawing.Size(882, 635);
-            this._ucSalesRegister1.TabIndex = 2;
+            this._pMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._pMainPanel.Location = new System.Drawing.Point(299, 3);
+            this._pMainPanel.Name = "_pMainPanel";
+            this._pMainPanel.Size = new System.Drawing.Size(882, 635);
+            this._pMainPanel.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(284, 216);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // Main
             // 
@@ -153,6 +166,7 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this._tlpMainButtons.ResumeLayout(false);
             this._tlpMainScreen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,7 +177,8 @@
         private System.Windows.Forms.Button _bSalesRegister;
         private System.Windows.Forms.TableLayoutPanel _tlpMainButtons;
         private System.Windows.Forms.TableLayoutPanel _tlpMainScreen;
-        private ucSalesRegister _ucSalesRegister1;
+        private System.Windows.Forms.Panel _pMainPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

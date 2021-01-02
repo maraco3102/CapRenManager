@@ -18,13 +18,17 @@ namespace CapRenManager
             InitializeComponent();
         }
 
-        protected new enum DataFields
+        #region On Load
+        private void ucSalesRegister_Load(object sender, EventArgs e)
         {
-            data = 1,
-            Name,
-            Password,
-            Active
+            LoadCoffinsFromDB();
+
+            LoadServiceTypesFromDB();
+
+            string today = GetCurrentDate();
+            _lblMainDateLabel.Text = today;
         }
+        #endregion
 
         #region Button Events
         private void _btnRegisterSale_Click(object sender, EventArgs e)
@@ -81,6 +85,8 @@ namespace CapRenManager
 
         #endregion
 
+        #region Methods
+
         #region Register Sale in DB
         static void registerData(DateTime registerDate, string date, string name, string price, string coffin, string type)
         {
@@ -113,17 +119,6 @@ namespace CapRenManager
 
         #region Generate Docs
 
-        #endregion
-
-        #region On Load
-        private void ucSalesRegister_Load(object sender, EventArgs e)
-        { 
-
-            LoadCoffinsFromDB();
-
-            LoadServiceTypesFromDB();
-
-        }
         #endregion
 
         #region Load Coffins in CB
@@ -170,6 +165,16 @@ namespace CapRenManager
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
+
+        #region Get Current Date
+        private string GetCurrentDate()
+        {
+            DateTime today = DateTime.Today;
+            return today.ToString("MM/dd/yyyy");
+        }
+        #endregion
+
         #endregion
     }
 }

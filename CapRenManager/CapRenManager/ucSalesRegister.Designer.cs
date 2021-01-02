@@ -97,6 +97,7 @@
             this._cbTypeService = new System.Windows.Forms.ComboBox();
             this._tbDeadPlace = new System.Windows.Forms.TextBox();
             this._nudCertificate = new System.Windows.Forms.NumericUpDown();
+            this._lblMainDateLabel = new System.Windows.Forms.Label();
             this._tlpSalesRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._nudAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._nudPrice)).BeginInit();
@@ -182,6 +183,7 @@
             this._tlpSalesRegister.Controls.Add(this._cbTypeService, 6, 19);
             this._tlpSalesRegister.Controls.Add(this._tbDeadPlace, 1, 7);
             this._tlpSalesRegister.Controls.Add(this._nudCertificate, 1, 9);
+            this._tlpSalesRegister.Controls.Add(this._lblMainDateLabel, 6, 20);
             this._tlpSalesRegister.Dock = System.Windows.Forms.DockStyle.Fill;
             this._tlpSalesRegister.Location = new System.Drawing.Point(0, 0);
             this._tlpSalesRegister.Name = "_tlpSalesRegister";
@@ -628,14 +630,16 @@
             // 
             // _btnRegisterSale
             // 
+            this._btnRegisterSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(90)))), ((int)(((byte)(240)))));
             this._tlpSalesRegister.SetColumnSpan(this._btnRegisterSale, 3);
             this._btnRegisterSale.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._btnRegisterSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._btnRegisterSale.Location = new System.Drawing.Point(320, 603);
             this._btnRegisterSale.Name = "_btnRegisterSale";
             this._btnRegisterSale.Size = new System.Drawing.Size(350, 29);
             this._btnRegisterSale.TabIndex = 34;
             this._btnRegisterSale.Text = "Registrar Servicio";
-            this._btnRegisterSale.UseVisualStyleBackColor = true;
+            this._btnRegisterSale.UseVisualStyleBackColor = false;
             this._btnRegisterSale.Click += new System.EventHandler(this._btnRegisterSale_Click);
             // 
             // _tbDeadName
@@ -930,6 +934,19 @@
             this._nudCertificate.Size = new System.Drawing.Size(184, 20);
             this._nudCertificate.TabIndex = 70;
             // 
+            // _lblMainDateLabel
+            // 
+            this._lblMainDateLabel.AutoSize = true;
+            this._tlpSalesRegister.SetColumnSpan(this._lblMainDateLabel, 2);
+            this._lblMainDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._lblMainDateLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this._lblMainDateLabel.Location = new System.Drawing.Point(676, 600);
+            this._lblMainDateLabel.Name = "_lblMainDateLabel";
+            this._lblMainDateLabel.Size = new System.Drawing.Size(203, 35);
+            this._lblMainDateLabel.TabIndex = 71;
+            this._lblMainDateLabel.Text = "label1";
+            this._lblMainDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ucSalesRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1019,5 +1036,6 @@
         private System.Windows.Forms.ComboBox _cbTypeService;
         private System.Windows.Forms.TextBox _tbDeadPlace;
         private System.Windows.Forms.NumericUpDown _nudCertificate;
+        private System.Windows.Forms.Label _lblMainDateLabel;
     }
 }

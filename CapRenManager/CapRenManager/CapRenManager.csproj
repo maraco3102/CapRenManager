@@ -100,6 +100,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucHistoric.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucHistoric.Designer.cs">
+      <DependentUpon>ucHistoric.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucSalesRegister.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +124,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucHistoric.resx">
+      <DependentUpon>ucHistoric.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucSalesRegister.resx">
       <DependentUpon>ucSalesRegister.cs</DependentUpon>
     </EmbeddedResource>
