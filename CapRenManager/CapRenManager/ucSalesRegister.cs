@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace CapRenManager
 {
@@ -62,8 +63,81 @@ namespace CapRenManager
             FormData.Add(_cbTypeCoffin.Text.ToString());
             FormData.Add(_cbTypeService.Text.ToString());
 
+            //Prepare data for DB
+            DateTime registerDate = DateTime.Today;
+            string date = _dtpDeadDate.Text.ToString();
+            string name = _tbDeadName.Text.ToString() + " " + _tbDeadSurname.Text.ToString();
+            string price = _nudPrice.Value.ToString();
+            string coffin = _cbTypeCoffin.Text.ToString();
+            string type = _cbTypeService.Text.ToString();
+
+            //Send data to DB
+            registerData(registerDate, date, name, price, coffin, type);
+
             //FormData.ForEach(Print);
 
         }
+
+        #region Register in DB
+        static void registerData(DateTime registerDate, string date, string name, string price, string coffin, string type)
+        {
+            try
+            {
+                //This is my connection string i have assigned the database file address path  
+                string MyConnection2 = Properties.Settings.Default.connectDB;
+                //This is my insert query in which i am taking input from the user through windows forms  
+                string Query = "insert into sales(Date,DateDead,Name,Price,Coffin,Type) values('" + registerDate.ToString() + "','" + date + "','" + name + "','" + price + "','" + coffin + "','" + type + "');";
+                //This is  MySqlConnection here i have created the object and pass my connection string.  
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                //This is command class which will handle the query and connection object.  
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MySqlDataReader MyReader2;
+                MyConn2.Open();
+                MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.  
+                MessageBox.Show("Servicio Registrado con exito!");
+                while (MyReader2.Read())
+                {
+                }
+                MyConn2.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        #endregion
+
+        #region Generate Docs
+
+        #endregion
+
+        private void ucSalesRegister_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                string MyConnection2 = Properties.Settings.Default.connectDB;
+                //Display query  
+                string Query = "select NameCoffin from coffins;";
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                //This is command class which will handle the query and connection object.  
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MySqlDataReader MyReader2 = MyCommand2.ExecuteReader();
+                MyConn2.Open();
+
+                while (MyReader2.Read())
+                {
+                    _cbTypeCoffin.Items.Add(MyReader2.GetString("id"));
+                }
+                MyConn2.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            }
+
+        
     }
 }

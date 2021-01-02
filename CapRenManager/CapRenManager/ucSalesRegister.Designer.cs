@@ -930,14 +930,15 @@
             this._nudCertificate.Size = new System.Drawing.Size(184, 20);
             this._nudCertificate.TabIndex = 70;
             // 
-            // _ucSalesRegister
+            // ucSalesRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
             this.Controls.Add(this._tlpSalesRegister);
-            this.Name = "_ucSalesRegister";
+            this.Name = "ucSalesRegister";
             this.Size = new System.Drawing.Size(882, 635);
+            this.Load += new System.EventHandler(this.ucSalesRegister_Load);
             this._tlpSalesRegister.ResumeLayout(false);
             this._tlpSalesRegister.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._nudAge)).EndInit();

@@ -56,6 +56,7 @@
             this._bSalesRegister.Text = "Registrar Ventas";
             this._bSalesRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this._bSalesRegister.UseVisualStyleBackColor = false;
+            this._bSalesRegister.Click += new System.EventHandler(this._bSalesRegister_Click);
             // 
             // _bSalesRecord
             // 
@@ -74,6 +75,7 @@
             this._bSalesRecord.Text = "Historial de Ventas";
             this._bSalesRecord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this._bSalesRecord.UseVisualStyleBackColor = false;
+            this._bSalesRecord.Click += new System.EventHandler(this._bSalesRecord_Click);
             // 
             // _bInventary
             // 
@@ -92,6 +94,7 @@
             this._bInventary.Text = "Inventario";
             this._bInventary.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this._bInventary.UseVisualStyleBackColor = false;
+            this._bInventary.Click += new System.EventHandler(this._bInventary_Click);
             // 
             // _tlpMainButtons
             // 
@@ -147,6 +150,7 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Archivador";
+            this.Load += new System.EventHandler(this.Main_Load);
             this._tlpMainButtons.ResumeLayout(false);
             this._tlpMainScreen.ResumeLayout(false);
             this.ResumeLayout(false);
