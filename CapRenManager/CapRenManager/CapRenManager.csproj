@@ -106,6 +106,12 @@
     <Compile Include="ucHistoric.Designer.cs">
       <DependentUpon>ucHistoric.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucInventary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucInventary.Designer.cs">
+      <DependentUpon>ucInventary.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucSalesRegister.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </Compile>
     <EmbeddedResource Include="ucHistoric.resx">
       <DependentUpon>ucHistoric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucInventary.resx">
+      <DependentUpon>ucInventary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucSalesRegister.resx">
       <DependentUpon>ucSalesRegister.cs</DependentUpon>
