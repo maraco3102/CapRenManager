@@ -27,7 +27,8 @@ namespace CapRenManager
         #region On load
         private void Main_Load(object sender, EventArgs e)
         {
-            
+            _ucSalesRegister.Dock = DockStyle.Fill;
+            _pMainPanel.Controls.Add(_ucSalesRegister);
         }
         #endregion
 

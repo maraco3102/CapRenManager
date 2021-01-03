@@ -25,8 +25,8 @@ namespace CapRenManager
 
             LoadServiceTypesFromDB();
 
-            string today = GetCurrentDate();
-            _lblMainDateLabel.Text = today;
+            int today = GetCurrentDate();
+            _lblMainDateLabel.Text = today.ToString();
         }
         #endregion
 
@@ -69,7 +69,9 @@ namespace CapRenManager
             FormData.Add(_cbTypeService.Text.ToString());
 
             //Prepare data for DB
-            DateTime registerDate = DateTime.Today;
+            int registerDate = GetCurrentDate();
+            //string registerDate = _lblMainDateLabel.Text.ToString();
+            //DateTime registerDate = DateTime.Today;
             string date = _dtpDeadDate.Text.ToString();
             string name = _tbDeadName.Text.ToString() + " " + _tbDeadSurname.Text.ToString();
             string price = _nudPrice.Value.ToString();
@@ -88,14 +90,15 @@ namespace CapRenManager
         #region Methods
 
         #region Register Sale in DB
-        static void registerData(DateTime registerDate, string date, string name, string price, string coffin, string type)
+        static void registerData(int registerDate, string date, string name, string price, string coffin, string type)
         {
+            string _sMonthName = GetMonthName(registerDate);
             try
             {
                 //This is my connection string i have assigned the database file address path  
                 string MyConnection2 = Properties.Settings.Default.connectDB;
                 //This is my insert query in which i am taking input from the user through windows forms  
-                string Query = "insert into sales(Date,DateDead,Name,Price,Coffin,Type) values('" + registerDate.ToString() + "','" + date + "','" + name + "','" + price + "','" + coffin + "','" + type + "');";
+                string Query = "insert into sales(Registro,Defuncion,Nombre,Precio,Ataud,Servicio) values('" + _sMonthName + "','" + date + "','" + name + "','" + price + "','" + coffin + "','" + type + "');";
                 //This is  MySqlConnection here i have created the object and pass my connection string.  
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 //This is command class which will handle the query and connection object.  
@@ -115,13 +118,37 @@ namespace CapRenManager
             }
         }
 
+        #region Get Month Name
+        static string GetMonthName(int registerDate)
+        {
+
+            switch (registerDate)
+            {
+                case 1: return "Enero";
+                case 2: return "Febrero";
+                case 3: return "Marzo";
+                case 4: return "Abril";
+                case 5: return "Mayo";
+                case 6: return "Junio";
+                case 7: return "Julio";
+                case 8: return "Agosto";
+                case 9: return "Septiembre";
+                case 10: return "Octubre";
+                case 11: return "Noviembre";
+                case 12: return "Diciembre";
+                default: return "error";
+            }
+
+        }
+        #endregion
+
         #endregion
 
         #region Generate Docs
 
         #endregion
 
-        #region Load Coffins in CB
+        #region Load Coffins nn CB
         private void LoadCoffinsFromDB()
         {
             try
@@ -144,7 +171,7 @@ namespace CapRenManager
         }
         #endregion
 
-        #region Load Service Types in CB
+        #region Load Service Types on CB
         private void LoadServiceTypesFromDB()
         {
             try
@@ -168,10 +195,12 @@ namespace CapRenManager
         #endregion
 
         #region Get Current Date
-        private string GetCurrentDate()
+        private int GetCurrentDate()
         {
             DateTime today = DateTime.Today;
-            return today.ToString("MM/dd/yyyy");
+            string _sMonth = today.ToString("MM");
+            int _iMonth = Int32.Parse(_sMonth);
+            return _iMonth;
         }
         #endregion
 
