@@ -33,5 +33,14 @@ namespace CapRenManager.Properties {
                 return ((string)(this["connectDB"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("password")]
+        public string password {
+            get {
+                return ((string)(this["password"]));
+            }
+        }
     }
 }
