@@ -8,19 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Globalization;
 
 namespace CapRenManager
 {
     public partial class Main : Form
     {
+        
+
         ucSalesRegister _ucSalesRegister;
         ucHistoric _ucHistoric;
+        ucInventary _ucInventary;
+        ucPassword _ucPassword;
+        wfPassword _wfPassword;
 
         public Main()
         {
             _ucSalesRegister = new ucSalesRegister();
             _ucHistoric = new ucHistoric();
-
+            _ucInventary = new ucInventary();
+            _ucPassword = new ucPassword();
+            _wfPassword = new wfPassword();
+            
             InitializeComponent();
         }
 
@@ -37,6 +46,8 @@ namespace CapRenManager
         {
 
             _pMainPanel.Controls.Remove(_ucHistoric);
+            _pMainPanel.Controls.Remove(_ucInventary);
+
             _ucSalesRegister.Dock = DockStyle.Fill;
             _pMainPanel.Controls.Add(_ucSalesRegister);
 
@@ -46,6 +57,8 @@ namespace CapRenManager
         {
 
             _pMainPanel.Controls.Remove(_ucSalesRegister);
+            _pMainPanel.Controls.Remove(_ucInventary);
+
             _ucHistoric.Dock = DockStyle.Fill;
             _pMainPanel.Controls.Add(_ucHistoric);
 
@@ -53,7 +66,11 @@ namespace CapRenManager
 
         private void _bInventary_Click(object sender, EventArgs e)
         {
+            _pMainPanel.Controls.Remove(_ucSalesRegister);
+            _pMainPanel.Controls.Remove(_ucHistoric);
 
+            _ucInventary.Dock = DockStyle.Fill;
+            _pMainPanel.Controls.Add(_ucInventary);
         }
         #endregion
 

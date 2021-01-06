@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using CapRenManager.Properties;
+using Microsoft.Office.Interop.Word;
+using System.IO;
 
 namespace CapRenManager
 {
@@ -81,7 +84,83 @@ namespace CapRenManager
             //Send data to DB
             registerData(registerDate, date, name, price, coffin, type);
 
-            //FormData.ForEach(Print);
+            #region Docs Creation
+            //Create a new microsoft word file
+            Microsoft.Office.Interop.Word.Application fileOpen = new Microsoft.Office.Interop.Word.Application();
+            //Open a already existing word file into the new document created
+            Microsoft.Office.Interop.Word.Document document = fileOpen.Documents.Open(@"C:\Resources\Docs.docx", ReadOnly: false);
+            //Make the file visible 
+            fileOpen.Visible = true;
+            document.Activate();
+            //The FindAndReplace takes the text to find under any formatting and replaces it with the
+            //new text with the same exact formmating (e.g red bold text will be replaced with red bold text)
+
+            FindAndReplace(fileOpen, "%DeadName", _tbDeadName.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadSurname", _tbDeadSurname.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadBirthPlace", _tbDeadBirthPlace.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadDateBirth", _dtpDeadBorn.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadSex", _cbDeadSex.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadAge", _nudAge.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadCivil", _cbCivilStatus.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadSchool", _tbDeadSchool.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadNation", _tbDeadNation.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadJob", _tbDeadJob.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadPlace", _tbDeadAddress.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadPartner", _tbDeadPartner.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadDeathPlace", _tbDeadPlace.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadNumDoc", _tbDeadDoctorNum.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadCertificate", _nudCertificate.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadDateDeath", _dtpDeadDate.Text.ToString());
+            FindAndReplace(fileOpen, "%DeatTime", _tbDeadTime.Text.ToString());
+            FindAndReplace(fileOpen, "%DeadCause", _tbDeadCause.Text.ToString());
+            FindAndReplace(fileOpen, "%DoctorName", _tbDeadDocName.Text.ToString());
+            FindAndReplace(fileOpen, "%InforName", _tbInformantName.Text.ToString());
+            FindAndReplace(fileOpen, "%InforRelation", _tbClientRelation.Text.ToString());
+            FindAndReplace(fileOpen, "%InforPlace", _tbClientAddress.Text.ToString());
+            FindAndReplace(fileOpen, "%Phone", _tbClientPhone.Text.ToString());
+            FindAndReplace(fileOpen, "%PlaceService", _tbPlaceService.Text.ToString());
+            FindAndReplace(fileOpen, "%DateService", _dtpServiceDate.Text.ToString());
+            FindAndReplace(fileOpen, "%FuneralDate", _dtpFuneralDate.Text.ToString());
+            FindAndReplace(fileOpen, "%FuneralTime", _tbFuneralTime.Text.ToString());
+            FindAndReplace(fileOpen, "%Cementery", _tbCementery.Text.ToString());
+            FindAndReplace(fileOpen, "%ClientName", _tbNameClient.Text.ToString());
+            FindAndReplace(fileOpen, "%Price", _nudPrice.Text.ToString());
+            FindAndReplace(fileOpen, "%Coffin", _cbTypeCoffin.Text.ToString());
+            FindAndReplace(fileOpen, "%TypeService", _cbTypeService.Text.ToString());
+
+            //Save the editted file in a specified location
+            //Can use SaveAs instead of SaveAs2 and just give it a name to have it saved by default
+            //to the documents folder
+            document.SaveAs2(@"C:\Resources\NewFile1");
+            //Close the file out
+            fileOpen.Quit();
+
+            #endregion
+
+            #region Cards Creation
+
+            ////Create a new microsoft word file
+            //Microsoft.Office.Interop.Word.Application fileOpen2 = new Microsoft.Office.Interop.Word.Application();
+            ////Open a already existing word file into the new document created
+            //Microsoft.Office.Interop.Word.Document document2 = fileOpen2.Documents.Open(@"C:\Resources\Stamp.docx", ReadOnly: false);
+            ////Make the file visible 
+            //fileOpen2.Visible = true;
+            //document2.Activate();
+            ////The FindAndReplace takes the text to find under any formatting and replaces it with the
+            ////new text with the same exact formmating (e.g red bold text will be replaced with red bold text)
+
+            //FindAndReplace(fileOpen2, "%DeadName", _tbDeadName.Text.ToString());
+            //FindAndReplace(fileOpen2, "%DeadSurname", _tbDeadSurname.Text.ToString());
+            //FindAndReplace(fileOpen2, "%DeadDateDeath", _dtpDeadDate.Text.ToString());
+
+            ////Save the editted file in a specified location
+            ////Can use SaveAs instead of SaveAs2 and just give it a name to have it saved by default
+            ////to the documents folder
+            //document2.SaveAs2(@"C:\Resources\NewFile2");
+            ////Close the file out
+            //fileOpen2.Quit();
+
+            #endregion
 
         }
 
@@ -118,6 +197,8 @@ namespace CapRenManager
             }
         }
 
+        #endregion
+
         #region Get Month Name
         static string GetMonthName(int registerDate)
         {
@@ -142,13 +223,32 @@ namespace CapRenManager
         }
         #endregion
 
+        #region Find Replace
+        static void FindAndReplace(Microsoft.Office.Interop.Word.Application fileOpen, object findText, object replaceWithText)
+        {
+            object matchCase = false;
+            object matchWholeWord = true;
+            object matchWildCards = false;
+            object matchSoundsLike = false;
+            object matchAllWordForms = false;
+            object forward = true;
+            object format = false;
+            object matchKashida = false;
+            object matchDiacritics = false;
+            object matchAlefHamza = false;
+            object matchControl = false;
+            object read_only = false;
+            object visible = true;
+            object replace = 2;
+            object wrap = 1;
+            //execute find and replace
+            fileOpen.Selection.Find.Execute(ref findText, ref matchCase, ref matchWholeWord,
+                ref matchWildCards, ref matchSoundsLike, ref matchAllWordForms, ref forward, ref wrap, ref format, ref replaceWithText, ref replace,
+                ref matchKashida, ref matchDiacritics, ref matchAlefHamza, ref matchControl);
+        }
         #endregion
 
-        #region Generate Docs
-
-        #endregion
-
-        #region Load Coffins nn CB
+        #region Load Coffins on CB
         private void LoadCoffinsFromDB()
         {
             try
