@@ -33,6 +33,7 @@
             this._bExportData = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this._cbMonth = new System.Windows.Forms.ComboBox();
+            this._lblDateFilter = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this._chkServiceType = new System.Windows.Forms.CheckBox();
             this._cbServiceType = new System.Windows.Forms.ComboBox();
@@ -40,7 +41,6 @@
             this._chkCoffinType = new System.Windows.Forms.CheckBox();
             this._cbCoffinType = new System.Windows.Forms.ComboBox();
             this._dgvHistoric = new System.Windows.Forms.DataGridView();
-            this._lblDateFilter = new System.Windows.Forms.Label();
             this._tlpHistoric.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -143,6 +143,19 @@
             this._cbMonth.Name = "_cbMonth";
             this._cbMonth.Size = new System.Drawing.Size(149, 21);
             this._cbMonth.TabIndex = 1;
+            // 
+            // _lblDateFilter
+            // 
+            this._lblDateFilter.AutoSize = true;
+            this._lblDateFilter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._lblDateFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblDateFilter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this._lblDateFilter.Location = new System.Drawing.Point(54, 24);
+            this._lblDateFilter.Name = "_lblDateFilter";
+            this._lblDateFilter.Size = new System.Drawing.Size(149, 24);
+            this._lblDateFilter.TabIndex = 2;
+            this._lblDateFilter.Text = "Filtrar por Mes";
+            this._lblDateFilter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
             // 
@@ -250,19 +263,6 @@
             this._tlpHistoric.SetRowSpan(this._dgvHistoric, 5);
             this._dgvHistoric.Size = new System.Drawing.Size(611, 629);
             this._dgvHistoric.TabIndex = 6;
-            // 
-            // _lblDateFilter
-            // 
-            this._lblDateFilter.AutoSize = true;
-            this._lblDateFilter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._lblDateFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblDateFilter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this._lblDateFilter.Location = new System.Drawing.Point(54, 24);
-            this._lblDateFilter.Name = "_lblDateFilter";
-            this._lblDateFilter.Size = new System.Drawing.Size(149, 24);
-            this._lblDateFilter.TabIndex = 2;
-            this._lblDateFilter.Text = "Filtrar por Mes";
-            this._lblDateFilter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ucHistoric
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace CapRenManager
 {
@@ -158,6 +159,16 @@ namespace CapRenManager
             }
             // save the application  
 
+            string root = @"C:\Registros";
+            string _sHistoricPath = "Historicos";
+
+            string savePath = Path.Combine(root, _sHistoricPath);
+
+            if (!Directory.Exists(savePath))
+            {
+                Directory.CreateDirectory(savePath);
+            }
+
             DateTime Savetoday = DateTime.Today;
             string _sSaveMonth = Savetoday.ToString("MM");
             int _iSaveMonth = Int32.Parse(_sSaveMonth);
@@ -166,8 +177,11 @@ namespace CapRenManager
 
             string _sSaveMonthName = _cbMonth.Text;
 
-            workbook.SaveAs("c:\\Registros\\" + _sSaveMonthName +".xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            string finalPath = Path.Combine(savePath, _sSaveMonthName);
+
+            workbook.SaveAs(finalPath + ".xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             // Exit from the application  
+            MessageBox.Show("Datos exportados exitosamente!");
         }
         #endregion
 

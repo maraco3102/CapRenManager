@@ -33,12 +33,12 @@
             this._bSalesRecord = new System.Windows.Forms.Button();
             this._bInventary = new System.Windows.Forms.Button();
             this._tlpMainButtons = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this._tlpMainScreen = new System.Windows.Forms.TableLayoutPanel();
             this._pMainPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this._tlpMainButtons.SuspendLayout();
-            this._tlpMainScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this._tlpMainScreen.SuspendLayout();
             this.SuspendLayout();
             // 
             // _bSalesRegister
@@ -118,6 +118,17 @@
             this._tlpMainButtons.Size = new System.Drawing.Size(290, 635);
             this._tlpMainButtons.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(284, 216);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // _tlpMainScreen
             // 
             this._tlpMainScreen.ColumnCount = 2;
@@ -141,17 +152,6 @@
             this._pMainPanel.Size = new System.Drawing.Size(882, 635);
             this._pMainPanel.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(284, 216);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,13 +160,14 @@
             this.ClientSize = new System.Drawing.Size(1184, 641);
             this.Controls.Add(this._tlpMainScreen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Archivador";
             this.Load += new System.EventHandler(this.Main_Load);
             this._tlpMainButtons.ResumeLayout(false);
-            this._tlpMainScreen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this._tlpMainScreen.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

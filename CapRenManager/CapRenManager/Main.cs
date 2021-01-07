@@ -14,7 +14,8 @@ namespace CapRenManager
 {
     public partial class Main : Form
     {
-        
+
+        CultureInfo myCIintl = new CultureInfo("es-ES", false);
 
         ucSalesRegister _ucSalesRegister;
         ucHistoric _ucHistoric;

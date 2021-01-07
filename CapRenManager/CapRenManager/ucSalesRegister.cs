@@ -28,6 +28,8 @@ namespace CapRenManager
 
             LoadServiceTypesFromDB();
 
+            LoadCivilStates();
+
             int today = GetCurrentDate();
             _lblMainDateLabel.Text = today.ToString();
         }
@@ -131,7 +133,36 @@ namespace CapRenManager
             //Save the editted file in a specified location
             //Can use SaveAs instead of SaveAs2 and just give it a name to have it saved by default
             //to the documents folder
-            document.SaveAs2(@"C:\Resources\NewFile1");
+            string root = @"C:\Registros\Servicios";
+
+            string _sYear = GetCurrentYear();
+            string subdirYear = @"C:\Registros\Servicios\"+_sYear;
+
+            int _iMonth = GetCurrentDate();
+            string _sMonth = GetMonthName(_iMonth);
+            string fullPath = Path.Combine(subdirYear,_sMonth);
+            //string subdirMonth = subdirYear + _sMonth;
+
+            // If directory does not exist, create it. 
+            if (!Directory.Exists(root))
+            {
+                Directory.CreateDirectory(root);
+            }
+
+            // Create a sub directory
+            if (!Directory.Exists(subdirYear))
+            {
+                Directory.CreateDirectory(subdirYear);
+            }
+
+            // Create a sub directory
+            if (!Directory.Exists(fullPath))
+            {
+                Directory.CreateDirectory(fullPath);
+            }
+
+            string savePath = Path.Combine(fullPath, _tbDeadName.Text.ToString() + "_" + _tbDeadSurname.Text.ToString());
+            document.SaveAs2(savePath);
             //Close the file out
             fileOpen.Quit();
 
@@ -162,6 +193,11 @@ namespace CapRenManager
 
             #endregion
 
+            //Update Coffin DB
+            UpdateCoffinDB(coffin);
+
+            MessageBox.Show("Servicio Registrado con exito!");
+
         }
 
         #endregion
@@ -185,7 +221,6 @@ namespace CapRenManager
                 MySqlDataReader MyReader2;
                 MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.  
-                MessageBox.Show("Servicio Registrado con exito!");
                 while (MyReader2.Read())
                 {
                 }
@@ -294,6 +329,29 @@ namespace CapRenManager
         }
         #endregion
 
+        #region Load Civil States in CB
+        private void LoadCivilStates()
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(Properties.Settings.Default.connectDB);
+
+                string selectQuery = "SELECT * FROM civilstates";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(selectQuery, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    _cbCivilStatus.Items.Add(reader.GetString("CivilState"));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
         #region Get Current Date
         private int GetCurrentDate()
         {
@@ -302,6 +360,85 @@ namespace CapRenManager
             int _iMonth = Int32.Parse(_sMonth);
             return _iMonth;
         }
+        #endregion
+
+        #region Get Current Year
+        private string GetCurrentYear()
+        {
+            DateTime today = DateTime.Today;
+            string _sYear = today.ToString("yyyy");
+            return _sYear;
+        }
+        #endregion
+
+        #region Get Current Month
+        private string GetCurrentMonth()
+        {
+            DateTime today = DateTime.Today;
+            string _sMonth = today.ToString("MM");
+            return _sMonth;
+        }
+        #endregion
+
+        #region Get Id and Inventory of CoffinType
+        private void UpdateCoffinDB(string _sCoffinType)
+        {
+            string _sIdCoffin;
+            string _sQuantytyCoffin;
+
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(Properties.Settings.Default.connectDB);
+
+                string selectQuery = "SELECT * FROM coffins where NameCoffin= '" + _sCoffinType + "';";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(selectQuery, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    _sIdCoffin = reader.GetString("IdCoffin");
+                    _sQuantytyCoffin = reader.GetString("Inventary");
+
+                    UpdateCoffinQuantity(_sIdCoffin, _sQuantytyCoffin);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
+        #region Update Coffin Quantity
+        private void UpdateCoffinQuantity(string _sIdCoffin, string _sQuantity)
+        {
+            try
+            {
+                int _iNewQuantity = (Int32.Parse(_sQuantity)-1);
+                string _sNewQuantity = _iNewQuantity.ToString();
+
+                //This is my connection string i have assigned the database file address path  
+                string MyConnection2 = Properties.Settings.Default.connectDB;
+                //This is my update query in which i am taking input from the user through windows forms and update the record.  
+                string Query = "update coffins set Inventary='" + _sNewQuantity + "' where IdCoffin='" + _sIdCoffin + "';";
+                //This is  MySqlConnection here i have created the object and pass my connection string.  
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MySqlDataReader MyReader2;
+                MyConn2.Open();
+                MyReader2 = MyCommand2.ExecuteReader();
+                while (MyReader2.Read())
+                {
+                }
+                MyConn2.Close();//Connection closed here  
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         #endregion
 
         #endregion

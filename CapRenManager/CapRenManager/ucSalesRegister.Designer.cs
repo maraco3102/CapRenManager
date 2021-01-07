@@ -811,11 +811,14 @@
             this._btnCleanFields.TabIndex = 56;
             this._btnCleanFields.Text = "Borrar Datos";
             this._btnCleanFields.UseVisualStyleBackColor = false;
+            this._btnCleanFields.Visible = false;
             // 
             // _dtpDeadBorn
             // 
             this._tlpSalesRegister.SetColumnSpan(this._dtpDeadBorn, 3);
+            this._dtpDeadBorn.CustomFormat = "dd/MM/yyyy";
             this._dtpDeadBorn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dtpDeadBorn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this._dtpDeadBorn.Location = new System.Drawing.Point(581, 63);
             this._dtpDeadBorn.Name = "_dtpDeadBorn";
             this._dtpDeadBorn.Size = new System.Drawing.Size(298, 20);
@@ -823,7 +826,12 @@
             // 
             // _cbDeadSex
             // 
+            this._cbDeadSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cbDeadSex.FormattingEnabled = true;
+            this._cbDeadSex.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "Otro"});
             this._cbDeadSex.Location = new System.Drawing.Point(130, 93);
             this._cbDeadSex.Name = "_cbDeadSex";
             this._cbDeadSex.Size = new System.Drawing.Size(89, 21);
@@ -848,7 +856,9 @@
             // _dtpDeadDate
             // 
             this._tlpSalesRegister.SetColumnSpan(this._dtpDeadDate, 2);
+            this._dtpDeadDate.CustomFormat = "dd/MM/yyyy";
             this._dtpDeadDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dtpDeadDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this._dtpDeadDate.Location = new System.Drawing.Point(453, 273);
             this._dtpDeadDate.Name = "_dtpDeadDate";
             this._dtpDeadDate.Size = new System.Drawing.Size(217, 20);
@@ -857,7 +867,9 @@
             // _dtpServiceDate
             // 
             this._tlpSalesRegister.SetColumnSpan(this._dtpServiceDate, 3);
+            this._dtpServiceDate.CustomFormat = "dd/MM/yyyy";
             this._dtpServiceDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dtpServiceDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this._dtpServiceDate.Location = new System.Drawing.Point(581, 453);
             this._dtpServiceDate.Name = "_dtpServiceDate";
             this._dtpServiceDate.Size = new System.Drawing.Size(298, 20);
@@ -866,7 +878,9 @@
             // _dtpFuneralDate
             // 
             this._tlpSalesRegister.SetColumnSpan(this._dtpFuneralDate, 3);
+            this._dtpFuneralDate.CustomFormat = "dd/MM/yyyy";
             this._dtpFuneralDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._dtpFuneralDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this._dtpFuneralDate.Location = new System.Drawing.Point(130, 483);
             this._dtpFuneralDate.Name = "_dtpFuneralDate";
             this._dtpFuneralDate.Size = new System.Drawing.Size(317, 20);
@@ -874,6 +888,7 @@
             // 
             // _cbCivilStatus
             // 
+            this._cbCivilStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cbCivilStatus.FormattingEnabled = true;
             this._cbCivilStatus.Location = new System.Drawing.Point(581, 93);
             this._cbCivilStatus.Name = "_cbCivilStatus";
@@ -946,6 +961,7 @@
             this._lblMainDateLabel.TabIndex = 71;
             this._lblMainDateLabel.Text = "label1";
             this._lblMainDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this._lblMainDateLabel.Visible = false;
             // 
             // ucSalesRegister
             // 
