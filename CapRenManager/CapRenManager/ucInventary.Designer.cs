@@ -128,7 +128,7 @@
             this._btnAddNew.Location = new System.Drawing.Point(28, 111);
             this._btnAddNew.Name = "_btnAddNew";
             this._btnAddNew.Size = new System.Drawing.Size(200, 30);
-            this._btnAddNew.TabIndex = 2;
+            this._btnAddNew.TabIndex = 6;
             this._btnAddNew.Text = "Añadir Nuevo";
             this._btnAddNew.UseVisualStyleBackColor = true;
             this._btnAddNew.Click += new System.EventHandler(this._btnAddNew_Click);
@@ -139,7 +139,7 @@
             this._nudNewTypeQuantity.Location = new System.Drawing.Point(131, 75);
             this._nudNewTypeQuantity.Name = "_nudNewTypeQuantity";
             this._nudNewTypeQuantity.Size = new System.Drawing.Size(97, 20);
-            this._nudNewTypeQuantity.TabIndex = 4;
+            this._nudNewTypeQuantity.TabIndex = 5;
             // 
             // _tbNewType
             // 
@@ -147,7 +147,7 @@
             this._tbNewType.Location = new System.Drawing.Point(131, 39);
             this._tbNewType.Name = "_tbNewType";
             this._tbNewType.Size = new System.Drawing.Size(97, 20);
-            this._tbNewType.TabIndex = 5;
+            this._tbNewType.TabIndex = 4;
             // 
             // _dgvInventary
             // 
@@ -170,7 +170,7 @@
             this._btnSearch.Location = new System.Drawing.Point(620, 383);
             this._btnSearch.Name = "_btnSearch";
             this._btnSearch.Size = new System.Drawing.Size(259, 121);
-            this._btnSearch.TabIndex = 1;
+            this._btnSearch.TabIndex = 7;
             this._btnSearch.Text = "Buscar";
             this._btnSearch.UseVisualStyleBackColor = false;
             this._btnSearch.Click += new System.EventHandler(this._btnSearch_Click);
@@ -185,7 +185,7 @@
             this._btnExport.Location = new System.Drawing.Point(620, 510);
             this._btnExport.Name = "_btnExport";
             this._btnExport.Size = new System.Drawing.Size(259, 122);
-            this._btnExport.TabIndex = 2;
+            this._btnExport.TabIndex = 8;
             this._btnExport.Text = "Exportar Busqueda";
             this._btnExport.UseVisualStyleBackColor = false;
             this._btnExport.Click += new System.EventHandler(this._btnExport_Click);
@@ -245,7 +245,7 @@
             this._btnUpdate.Location = new System.Drawing.Point(28, 111);
             this._btnUpdate.Name = "_btnUpdate";
             this._btnUpdate.Size = new System.Drawing.Size(200, 30);
-            this._btnUpdate.TabIndex = 2;
+            this._btnUpdate.TabIndex = 3;
             this._btnUpdate.Text = "Actualizar";
             this._btnUpdate.UseVisualStyleBackColor = true;
             this._btnUpdate.Click += new System.EventHandler(this._btnUpdate_Click);
@@ -257,7 +257,7 @@
             this._cbType.Location = new System.Drawing.Point(131, 39);
             this._cbType.Name = "_cbType";
             this._cbType.Size = new System.Drawing.Size(97, 21);
-            this._cbType.TabIndex = 3;
+            this._cbType.TabIndex = 1;
             // 
             // _nudNewQuantity
             // 
@@ -265,7 +265,7 @@
             this._nudNewQuantity.Location = new System.Drawing.Point(131, 75);
             this._nudNewQuantity.Name = "_nudNewQuantity";
             this._nudNewQuantity.Size = new System.Drawing.Size(97, 20);
-            this._nudNewQuantity.TabIndex = 4;
+            this._nudNewQuantity.TabIndex = 2;
             // 
             // ucInventary
             // 

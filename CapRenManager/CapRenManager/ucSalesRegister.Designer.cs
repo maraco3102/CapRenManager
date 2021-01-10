@@ -649,7 +649,7 @@
             this._tbDeadName.Location = new System.Drawing.Point(130, 33);
             this._tbDeadName.Name = "_tbDeadName";
             this._tbDeadName.Size = new System.Drawing.Size(317, 20);
-            this._tbDeadName.TabIndex = 35;
+            this._tbDeadName.TabIndex = 1;
             // 
             // _tbDeadSurname
             // 
@@ -658,7 +658,7 @@
             this._tbDeadSurname.Location = new System.Drawing.Point(581, 33);
             this._tbDeadSurname.Name = "_tbDeadSurname";
             this._tbDeadSurname.Size = new System.Drawing.Size(298, 20);
-            this._tbDeadSurname.TabIndex = 36;
+            this._tbDeadSurname.TabIndex = 2;
             // 
             // _tbDeadBirthPlace
             // 
@@ -667,14 +667,14 @@
             this._tbDeadBirthPlace.Location = new System.Drawing.Point(130, 63);
             this._tbDeadBirthPlace.Name = "_tbDeadBirthPlace";
             this._tbDeadBirthPlace.Size = new System.Drawing.Size(317, 20);
-            this._tbDeadBirthPlace.TabIndex = 37;
+            this._tbDeadBirthPlace.TabIndex = 3;
             // 
             // _tbDeadSchool
             // 
             this._tbDeadSchool.Location = new System.Drawing.Point(787, 93);
             this._tbDeadSchool.Name = "_tbDeadSchool";
             this._tbDeadSchool.Size = new System.Drawing.Size(89, 20);
-            this._tbDeadSchool.TabIndex = 39;
+            this._tbDeadSchool.TabIndex = 8;
             // 
             // _tbDeadJob
             // 
@@ -683,7 +683,7 @@
             this._tbDeadJob.Location = new System.Drawing.Point(581, 123);
             this._tbDeadJob.Name = "_tbDeadJob";
             this._tbDeadJob.Size = new System.Drawing.Size(298, 20);
-            this._tbDeadJob.TabIndex = 40;
+            this._tbDeadJob.TabIndex = 10;
             // 
             // _tbDeadNation
             // 
@@ -692,7 +692,7 @@
             this._tbDeadNation.Location = new System.Drawing.Point(130, 123);
             this._tbDeadNation.Name = "_tbDeadNation";
             this._tbDeadNation.Size = new System.Drawing.Size(317, 20);
-            this._tbDeadNation.TabIndex = 41;
+            this._tbDeadNation.TabIndex = 9;
             // 
             // _tbDeadAddress
             // 
@@ -701,7 +701,7 @@
             this._tbDeadAddress.Location = new System.Drawing.Point(130, 153);
             this._tbDeadAddress.Name = "_tbDeadAddress";
             this._tbDeadAddress.Size = new System.Drawing.Size(749, 20);
-            this._tbDeadAddress.TabIndex = 42;
+            this._tbDeadAddress.TabIndex = 11;
             // 
             // _tbDeadPartner
             // 
@@ -710,7 +710,7 @@
             this._tbDeadPartner.Location = new System.Drawing.Point(130, 183);
             this._tbDeadPartner.Name = "_tbDeadPartner";
             this._tbDeadPartner.Size = new System.Drawing.Size(749, 20);
-            this._tbDeadPartner.TabIndex = 43;
+            this._tbDeadPartner.TabIndex = 12;
             // 
             // _tbDeadDoctorNum
             // 
@@ -719,14 +719,14 @@
             this._tbDeadDoctorNum.Location = new System.Drawing.Point(130, 243);
             this._tbDeadDoctorNum.Name = "_tbDeadDoctorNum";
             this._tbDeadDoctorNum.Size = new System.Drawing.Size(749, 20);
-            this._tbDeadDoctorNum.TabIndex = 45;
+            this._tbDeadDoctorNum.TabIndex = 14;
             // 
             // _tbDeadTime
             // 
             this._tbDeadTime.Location = new System.Drawing.Point(787, 273);
             this._tbDeadTime.Name = "_tbDeadTime";
             this._tbDeadTime.Size = new System.Drawing.Size(89, 20);
-            this._tbDeadTime.TabIndex = 47;
+            this._tbDeadTime.TabIndex = 17;
             // 
             // _tbDeadCause
             // 
@@ -735,7 +735,7 @@
             this._tbDeadCause.Location = new System.Drawing.Point(130, 303);
             this._tbDeadCause.Name = "_tbDeadCause";
             this._tbDeadCause.Size = new System.Drawing.Size(749, 20);
-            this._tbDeadCause.TabIndex = 48;
+            this._tbDeadCause.TabIndex = 18;
             // 
             // _tbDeadDocName
             // 
@@ -744,7 +744,7 @@
             this._tbDeadDocName.Location = new System.Drawing.Point(130, 333);
             this._tbDeadDocName.Name = "_tbDeadDocName";
             this._tbDeadDocName.Size = new System.Drawing.Size(749, 20);
-            this._tbDeadDocName.TabIndex = 49;
+            this._tbDeadDocName.TabIndex = 19;
             // 
             // _tbInformantName
             // 
@@ -753,7 +753,7 @@
             this._tbInformantName.Location = new System.Drawing.Point(130, 393);
             this._tbInformantName.Name = "_tbInformantName";
             this._tbInformantName.Size = new System.Drawing.Size(317, 20);
-            this._tbInformantName.TabIndex = 50;
+            this._tbInformantName.TabIndex = 20;
             // 
             // _tbClientRelation
             // 
@@ -762,7 +762,7 @@
             this._tbClientRelation.Location = new System.Drawing.Point(581, 393);
             this._tbClientRelation.Name = "_tbClientRelation";
             this._tbClientRelation.Size = new System.Drawing.Size(298, 20);
-            this._tbClientRelation.TabIndex = 51;
+            this._tbClientRelation.TabIndex = 21;
             // 
             // _tbClientAddress
             // 
@@ -771,7 +771,7 @@
             this._tbClientAddress.Location = new System.Drawing.Point(130, 423);
             this._tbClientAddress.Name = "_tbClientAddress";
             this._tbClientAddress.Size = new System.Drawing.Size(317, 20);
-            this._tbClientAddress.TabIndex = 52;
+            this._tbClientAddress.TabIndex = 22;
             // 
             // _tbClientPhone
             // 
@@ -780,7 +780,7 @@
             this._tbClientPhone.Location = new System.Drawing.Point(581, 423);
             this._tbClientPhone.Name = "_tbClientPhone";
             this._tbClientPhone.Size = new System.Drawing.Size(298, 20);
-            this._tbClientPhone.TabIndex = 53;
+            this._tbClientPhone.TabIndex = 23;
             // 
             // _tbCementery
             // 
@@ -789,7 +789,7 @@
             this._tbCementery.Location = new System.Drawing.Point(130, 513);
             this._tbCementery.Name = "_tbCementery";
             this._tbCementery.Size = new System.Drawing.Size(749, 20);
-            this._tbCementery.TabIndex = 54;
+            this._tbCementery.TabIndex = 28;
             // 
             // _tbNameClient
             // 
@@ -798,7 +798,7 @@
             this._tbNameClient.Location = new System.Drawing.Point(130, 543);
             this._tbNameClient.Name = "_tbNameClient";
             this._tbNameClient.Size = new System.Drawing.Size(749, 20);
-            this._tbNameClient.TabIndex = 55;
+            this._tbNameClient.TabIndex = 29;
             // 
             // _btnCleanFields
             // 
@@ -822,7 +822,7 @@
             this._dtpDeadBorn.Location = new System.Drawing.Point(581, 63);
             this._dtpDeadBorn.Name = "_dtpDeadBorn";
             this._dtpDeadBorn.Size = new System.Drawing.Size(298, 20);
-            this._dtpDeadBorn.TabIndex = 57;
+            this._dtpDeadBorn.TabIndex = 4;
             // 
             // _cbDeadSex
             // 
@@ -835,14 +835,14 @@
             this._cbDeadSex.Location = new System.Drawing.Point(130, 93);
             this._cbDeadSex.Name = "_cbDeadSex";
             this._cbDeadSex.Size = new System.Drawing.Size(89, 21);
-            this._cbDeadSex.TabIndex = 58;
+            this._cbDeadSex.TabIndex = 5;
             // 
             // _nudAge
             // 
             this._nudAge.Location = new System.Drawing.Point(320, 93);
             this._nudAge.Name = "_nudAge";
             this._nudAge.Size = new System.Drawing.Size(120, 20);
-            this._nudAge.TabIndex = 59;
+            this._nudAge.TabIndex = 6;
             // 
             // _nudPrice
             // 
@@ -851,7 +851,7 @@
             this._nudPrice.Location = new System.Drawing.Point(130, 573);
             this._nudPrice.Name = "_nudPrice";
             this._nudPrice.Size = new System.Drawing.Size(184, 20);
-            this._nudPrice.TabIndex = 60;
+            this._nudPrice.TabIndex = 30;
             // 
             // _dtpDeadDate
             // 
@@ -862,7 +862,7 @@
             this._dtpDeadDate.Location = new System.Drawing.Point(453, 273);
             this._dtpDeadDate.Name = "_dtpDeadDate";
             this._dtpDeadDate.Size = new System.Drawing.Size(217, 20);
-            this._dtpDeadDate.TabIndex = 61;
+            this._dtpDeadDate.TabIndex = 16;
             // 
             // _dtpServiceDate
             // 
@@ -873,7 +873,7 @@
             this._dtpServiceDate.Location = new System.Drawing.Point(581, 453);
             this._dtpServiceDate.Name = "_dtpServiceDate";
             this._dtpServiceDate.Size = new System.Drawing.Size(298, 20);
-            this._dtpServiceDate.TabIndex = 62;
+            this._dtpServiceDate.TabIndex = 25;
             // 
             // _dtpFuneralDate
             // 
@@ -884,7 +884,7 @@
             this._dtpFuneralDate.Location = new System.Drawing.Point(130, 483);
             this._dtpFuneralDate.Name = "_dtpFuneralDate";
             this._dtpFuneralDate.Size = new System.Drawing.Size(317, 20);
-            this._dtpFuneralDate.TabIndex = 63;
+            this._dtpFuneralDate.TabIndex = 26;
             // 
             // _cbCivilStatus
             // 
@@ -893,7 +893,7 @@
             this._cbCivilStatus.Location = new System.Drawing.Point(581, 93);
             this._cbCivilStatus.Name = "_cbCivilStatus";
             this._cbCivilStatus.Size = new System.Drawing.Size(89, 21);
-            this._cbCivilStatus.TabIndex = 64;
+            this._cbCivilStatus.TabIndex = 7;
             // 
             // _tbPlaceService
             // 
@@ -902,7 +902,7 @@
             this._tbPlaceService.Location = new System.Drawing.Point(130, 453);
             this._tbPlaceService.Name = "_tbPlaceService";
             this._tbPlaceService.Size = new System.Drawing.Size(317, 20);
-            this._tbPlaceService.TabIndex = 65;
+            this._tbPlaceService.TabIndex = 24;
             // 
             // _tbFuneralTime
             // 
@@ -911,7 +911,7 @@
             this._tbFuneralTime.Location = new System.Drawing.Point(581, 483);
             this._tbFuneralTime.Name = "_tbFuneralTime";
             this._tbFuneralTime.Size = new System.Drawing.Size(298, 20);
-            this._tbFuneralTime.TabIndex = 66;
+            this._tbFuneralTime.TabIndex = 27;
             // 
             // _cbTypeCoffin
             // 
@@ -919,7 +919,7 @@
             this._cbTypeCoffin.Location = new System.Drawing.Point(453, 573);
             this._cbTypeCoffin.Name = "_cbTypeCoffin";
             this._cbTypeCoffin.Size = new System.Drawing.Size(121, 21);
-            this._cbTypeCoffin.TabIndex = 67;
+            this._cbTypeCoffin.TabIndex = 31;
             // 
             // _cbTypeService
             // 
@@ -929,7 +929,7 @@
             this._cbTypeService.Location = new System.Drawing.Point(676, 573);
             this._cbTypeService.Name = "_cbTypeService";
             this._cbTypeService.Size = new System.Drawing.Size(203, 21);
-            this._cbTypeService.TabIndex = 68;
+            this._cbTypeService.TabIndex = 32;
             // 
             // _tbDeadPlace
             // 
@@ -938,7 +938,7 @@
             this._tbDeadPlace.Location = new System.Drawing.Point(130, 213);
             this._tbDeadPlace.Name = "_tbDeadPlace";
             this._tbDeadPlace.Size = new System.Drawing.Size(749, 20);
-            this._tbDeadPlace.TabIndex = 69;
+            this._tbDeadPlace.TabIndex = 13;
             // 
             // _nudCertificate
             // 
@@ -947,7 +947,7 @@
             this._nudCertificate.Location = new System.Drawing.Point(130, 273);
             this._nudCertificate.Name = "_nudCertificate";
             this._nudCertificate.Size = new System.Drawing.Size(184, 20);
-            this._nudCertificate.TabIndex = 70;
+            this._nudCertificate.TabIndex = 15;
             // 
             // _lblMainDateLabel
             // 

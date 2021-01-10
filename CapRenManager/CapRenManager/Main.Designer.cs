@@ -55,6 +55,7 @@
             this._bSalesRegister.Name = "_bSalesRegister";
             this._bSalesRegister.Size = new System.Drawing.Size(290, 95);
             this._bSalesRegister.TabIndex = 1;
+            this._bSalesRegister.TabStop = false;
             this._bSalesRegister.Text = "Registrar Ventas";
             this._bSalesRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this._bSalesRegister.UseVisualStyleBackColor = false;
@@ -74,6 +75,7 @@
             this._bSalesRecord.Name = "_bSalesRecord";
             this._bSalesRecord.Size = new System.Drawing.Size(290, 95);
             this._bSalesRecord.TabIndex = 2;
+            this._bSalesRecord.TabStop = false;
             this._bSalesRecord.Text = "Historial de Ventas";
             this._bSalesRecord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this._bSalesRecord.UseVisualStyleBackColor = false;
@@ -93,6 +95,7 @@
             this._bInventary.Name = "_bInventary";
             this._bInventary.Size = new System.Drawing.Size(290, 95);
             this._bInventary.TabIndex = 3;
+            this._bInventary.TabStop = false;
             this._bInventary.Text = "Inventario";
             this._bInventary.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this._bInventary.UseVisualStyleBackColor = false;

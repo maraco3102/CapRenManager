@@ -31,13 +31,21 @@ namespace CapRenManager
         #region Update DB
         private void _btnUpdate_Click(object sender, EventArgs e)
         {
-            string _sCoffinType = _cbType.SelectedItem.ToString();
 
-            UpdateCoffinDB(_sCoffinType);
+            if(_cbType.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un tipo.");
+            }
+            else
+            {
+                string _sCoffinType = _cbType.SelectedItem.ToString();
 
-            GetInventory();
+                UpdateCoffinDB(_sCoffinType);
 
-            MessageBox.Show("Base de Datos Actualizada");
+                GetInventory();
+
+                MessageBox.Show("Base de Datos Actualizada");
+            }
         }
         #endregion
 
