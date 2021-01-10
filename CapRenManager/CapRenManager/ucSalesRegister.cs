@@ -96,7 +96,10 @@ namespace CapRenManager
             document.Activate();
             //The FindAndReplace takes the text to find under any formatting and replaces it with the
             //new text with the same exact formmating (e.g red bold text will be replaced with red bold text)
+            DateTime today = DateTime.Today;
+            string CurrentDate = today.ToString("dd-MM-yyyy");
 
+            FindAndReplace(fileOpen, "%DateRegister", CurrentDate.ToString());
             FindAndReplace(fileOpen, "%DeadName", _tbDeadName.Text.ToString());
             FindAndReplace(fileOpen, "%DeadSurname", _tbDeadSurname.Text.ToString());
             FindAndReplace(fileOpen, "%DeadBirthPlace", _tbDeadBirthPlace.Text.ToString());
